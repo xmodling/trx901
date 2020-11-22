@@ -1,6 +1,5 @@
 
 
-
 import os, sys
 from time import sleep
 try:
@@ -10,7 +9,7 @@ except ImportError:
         os.system("cls")
     else:
         os.system("clear") 
-    exit('[!] Увас отсуствует requests. pip install requests')
+    exit('[!] У вас отсуствует requests. pip install requests')
 try:
     from bs4 import BeautifulSoup as bs
 except ImportError:
@@ -190,9 +189,7 @@ def receiving_data_ip():
             resIP = requests.get('https://httpbin.org/ip')
             resultIP = resIP.text.split()[2].strip('"')
 
-            print(f'{CYAN}{BOLD}[#] {LI_G}Поддержка: {DARK}https://www.donationalerts.com/r/No_BlackMail{RESET}')
-            print(f'{CYAN}{BOLD}[#] {LI_G}Ваш IP: {DARK}{resultIP}{RESET}')
-            ip = input(f'{CYAN}{BOLD}[~] {LI_G}Введите IP: {RESET}').strip()
+            ip = input(f'{CYAN}{BOLD}[~] {LI_G} IP: {RESET}').strip()
 
             if ip == '':
                 ip = resultIP
@@ -218,7 +215,6 @@ def receiving_data_ip():
                 except KeyError:
                     if country["country_code3"] == 'UKR':
                         print(f'{CYAN}{BOLD}[+] {LI_G}Страна:{F_CL} Украина{RESET}')
-                        # Если сервис не сможет найти страны, Код Стран в помощь.
 
                         fileD.write(f'[+] Страна: Украина \n')
                     else:
@@ -668,7 +664,7 @@ while True:
                 print(f'{YELLOW}{BOLD}[!] {LI_G}Город/Оператор:{F_CL} Неизвестно {RESET}')
                 
             
-            if interNet == 0:
+            if interNet == 98918299891:
                 pass
             else:    
 
